@@ -12,7 +12,8 @@ print(2**8)    # "**" is power
 squared = 2 * 8
 print("The squared is", squared)
 
-# work with string: using single quotes
+# ########## WORK WITH STRING: immutable data type (cannot change)
+# using single quotes
 # ... double qouptes will consider special characters in side (like PHP)
 str = 'It\'s Python!\n The "shortest" language.'
 print(str)
@@ -47,5 +48,17 @@ print('%(lang)s has %(num)03d quote types.' % {
         'lang': 'Python', 'num': 3
     })
 
+# ########## WORK WITH LIST: mutable data type
+print('\n------------------------------------------------------\n')
+squares = [1, 4, 9, 16, 25]
 
+# slide operations
+print(len(squares), squares[:2], squares[2:4], squares[:1] + squares[2:3])  # use PLUS concat like string
 
+squares[0] = 2**3
+squares.append(3**4)        # add to the end
+print(squares[:])
+
+# bulk-changing with slide
+squares[-3:-1] = ['x', 'y', ['nested', 'list']]
+print(squares)
