@@ -62,3 +62,10 @@ print(squares[:])
 # bulk-changing with slide
 squares[-3:-1] = ['x', 'y', ['nested', 'list']]
 print(squares)
+
+# ########## Some new features
+# multiple assignment
+a, b = 0, 1
+while b < 10:       # The body of the loop is indented: indentation is Python’s way of grouping statements
+    print(b, end=', ')      # set the end-line character
+    a, b = b, a + b
